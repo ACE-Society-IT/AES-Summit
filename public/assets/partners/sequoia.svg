@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <!-- Sequoia Pine Emblem -->
+  <g fill="#005A36">
+    <path d="M22 6L14 15h3.5L12 22h4L10 30h10v4h4v-4h10l-6-8h4l-5.5-7H30L22 6z"/>
+  </g>
+  <!-- Sequoia Wordmark -->
+  <text x="44" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="800" letter-spacing="1.5" fill="#1B0805">SEQUOIA</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <!-- BVP Diamond Facet -->
+  <polygon points="18 9 28 16 28 24 18 31 8 24 8 16" stroke="#1B0805" stroke-width="2.5" stroke-linejoin="round"/>
+  <line x1="18" y1="9" x2="18" y2="31" stroke="#1B0805" stroke-width="2"/>
+  <!-- Wordmark -->
+  <text x="36" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="1.2" fill="#1B0805">BESSEMER</text>
+</svg>

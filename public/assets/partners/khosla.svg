@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" fill="none">
+  <!-- Khosla concentric orbits icon -->
+  <circle cx="18" cy="20" r="11" stroke="#1B0805" stroke-width="2.5"/>
+  <circle cx="18" cy="20" r="5" fill="#1B0805"/>
+  <!-- Wordmark -->
+  <text x="36" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="800" letter-spacing="1.2" fill="#1B0805">KHOSLA VENTURES</text>
+</svg>

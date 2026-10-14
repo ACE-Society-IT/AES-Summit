@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" fill="none">
+  <!-- Three equal columns icon -->
+  <g fill="#1B0805">
+    <rect x="8" y="9" width="4.5" height="22" rx="1.5"/>
+    <rect x="15" y="9" width="4.5" height="22" rx="1.5"/>
+    <rect x="22" y="9" width="4.5" height="22" rx="1.5"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="35" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#1B0805">BENCHMARK</text>
+</svg>

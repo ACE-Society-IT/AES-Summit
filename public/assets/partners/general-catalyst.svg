@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 40" fill="none">
+  <!-- General Catalyst Spark Node -->
+  <circle cx="18" cy="20" r="4.5" fill="#1B0805"/>
+  <path d="M18 9v4M18 27v4M7 20h4M25 20h4M10 12l3 3M23 25l3 3M10 28l3-3M23 15l3-3" stroke="#1B0805" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Wordmark -->
+  <text x="36" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="800" letter-spacing="1" fill="#1B0805">GENERAL CATALYST</text>
+</svg>

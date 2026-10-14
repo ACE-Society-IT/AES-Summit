@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 40" fill="none">
+  <!-- Double chevron icon -->
+  <polyline points="10 24 19 32 28 24" stroke="#1B0805" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="10 14 19 22 28 14" stroke="#1B0805" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="36" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="800" letter-spacing="1" fill="#1B0805">FOUNDERS FUND</text>
+</svg>

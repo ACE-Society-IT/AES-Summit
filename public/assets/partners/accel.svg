@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 40" fill="none">
+  <!-- Accel Arrow -->
+  <path d="M10 26L24 12M24 12H12M24 12V24" stroke="#D32F2F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="36" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="800" letter-spacing="1.5" fill="#1B0805">ACCEL</text>
+</svg>

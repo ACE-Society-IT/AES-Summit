@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpha Entrepreneurship Summit (AES) — Forging Next-Gen Founders</title>
+  <meta name="description" content="Alpha Entrepreneurship Summit: Join the next generation of founders at our flagship event. Engage with industry leaders, develop your skills, and launch your innovative ideas.">
+  <meta name="theme-color" content="#1B0805">
+
+  <!-- Google Fonts: Modern sans & display pairing per design rules -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Dynamic Scroll Progress Bar -->
+  <div id="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+  <!-- Magnetic Interactive Cursor (Desktop) -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       FLOATING ISLAND NAVBAR
+       ========================================================================== -->
+  <header class="nav-island-wrapper">
+    <nav class="nav-island" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="AES Home">
+        <img src="assets/aes-logo.png" alt="Alpha Entrepreneurship Summit Logo" class="nav-brand-img">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">AES 2026</span>
+          <span class="nav-brand-subtitle">Summit Flagship</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#pillars" class="nav-link">Pillars</a></li>
+        <li><a href="#pitch-arena" class="nav-link">Pitch Arena</a></li>
+        <li><a href="#speakers" class="nav-link">Speakers</a></li>
+        <li><a href="#agenda" class="nav-link">Agenda</a></li>
+        <li><a href="#passes" class="nav-link">Passes</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Tactile Audio Toggle Button -->
+        <button id="audio-toggle" class="audio-toggle-btn" aria-label="Toggle Tactile Audio" title="Toggle Tactile Audio Feedback">
+          <svg id="sound-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          </svg>
+        </button>
+
+        <!-- Nested Primary CTA Button -->
+        <a href="#passes" class="btn-nested btn-primary open-register-trigger">
+          <span>Claim Pass</span>
+          <span class="btn-icon-circle" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </span>
+        </a>
+
+        <!-- Hamburger Button for Mobile -->
+        <button id="hamburger-toggle" class="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link">Overview</a></li>
+      <li><a href="#pillars" class="mobile-nav-link">Summit Pillars</a></li>
+      <li><a href="#pitch-arena" class="mobile-nav-link">Pitch Arena</a></li>
+      <li><a href="#speakers" class="mobile-nav-link">Keynote Speakers</a></li>
+      <li><a href="#agenda" class="mobile-nav-link">3-Day Agenda</a></li>
+      <li><a href="#passes" class="mobile-nav-link">Passes & Tiers</a></li>
+      <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+    </ul>
+    <a href="#passes" class="btn-nested btn-primary open-register-trigger" style="margin-top: 1rem;">
+      <span>Apply for Pass</span>
+      <span class="btn-icon-circle" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Cinematic Architectural Stage)
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <canvas id="hero-canvas" class="hero-canvas-bg"></canvas>
+      <div class="hero-radial-glow" aria-hidden="true"></div>
+
+      <div class="hero-container">
+        <!-- Hero Left Column: Copy & Actions -->
+        <div class="hero-copy reveal-on-scroll">
+          <div class="eyebrow">
+            <span class="pulse-dot"></span>
+            Alpha Entrepreneurship Summit · 2026 Edition
+          </div>
+
+          <h1 class="hero-title">
+            FORGING THE NEXT <br>
+            <span class="accent-sand">TITANS OF VENTURE</span>
+          </h1>
+
+          <p class="hero-subtext">
+            Join the next generation of founders at our flagship event. Engage with industry leaders, develop your skills, and launch your innovative ideas.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#passes" class="btn-nested btn-primary open-register-trigger">
+              <span>Register Your Venture</span>
+              <span class="btn-icon-circle" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </span>
+            </a>
+
+            <a href="#pitch-arena" class="btn-nested btn-secondary">
+              <span>Explore Pitch Arena</span>
+              <span class="btn-icon-circle" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <!-- Quantitative Trust Telemetry Strip -->
+          <div class="hero-meta-bar">
+            <div class="meta-item">
+              <span class="meta-num">$50M+</span>
+              <span class="meta-label">Committed Seed & SAFE</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-num">120+</span>
+              <span class="meta-label">Visionary Keynotes</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-num">3,500+</span>
+              <span class="meta-label">Vetted Founders</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-num">48h</span>
+              <span class="meta-label">Live Deal Syndicate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: 3D Stage Visual & Live Countdown Badge -->
+        <div class="hero-visual-frame reveal-on-scroll">
+          <div class="hero-visual-inner">
+            <img src="assets/hero_stage.jpg" alt="Alpha Entrepreneurship Summit Main Auditorium Stage" class="hero-img-main">
+            
+            <div class="hero-floating-badge">
+              <div class="badge-info">
+                <span class="badge-headline">Nov 12–14, 2026 · Hybrid Stage</span>
+                <span class="badge-location">San Francisco Performing Arts Hall</span>
+              </div>
+              <div class="countdown-pill" aria-label="Summit Countdown">
+                <span id="count-days">29</span>d :
+                <span id="count-hours">14</span>h :
+                <span id="count-mins">32</span>m :
+                <span id="count-secs">58</span>s
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VENTURE PARTNER / ECOSYSTEM MARQUEE
+         ========================================================================== -->
+    <section class="ecosystem-section" aria-label="Summit Venture Partners">
+      <p class="marquee-label">BACKED BY LEADING VENTURE HOUSES & ACCELERATORS</p>
+      
+      <div class="marquee-track-wrap">
+        <div class="marquee-track">
+          <!-- Custom Vector Brand 1: Apex Horizon -->
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <polygon points="12 2 22 21 2 21" stroke-width="2"/>
+              <line x1="12" y1="8" x2="12" y2="16" stroke-width="2"/>
+            </svg>
+            <span class="partner-name">APEX HORIZON</span>
+          </div>
+
+          <!-- Custom Vector Brand 2: Vanguard Ventures -->
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <path d="M4 4l8 16 8-16-8 6z" stroke-width="2"/>
+            </svg>
+            <span class="partner-name">VANGUARD VENTURES</span>
+          </div>
+
+          <!-- Custom Vector Brand 3: Horizon Foundry -->
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" stroke-width="2"/>
+              <line x1="3" y1="12" x2="21" y2="12" stroke-width="2"/>
+            </svg>
+            <span class="partner-name">HORIZON FOUNDRY</span>
+          </div>
+
+          <!-- Custom Vector Brand 4: Nexus Syndicate -->
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <circle cx="6" cy="6" r="3" stroke-width="2"/>
+              <circle cx="18" cy="6" r="3" stroke-width="2"/>
+              <circle cx="12" cy="18" r="3" stroke-width="2"/>
+              <line x1="8.5" y1="7.5" x2="15.5" y2="7.5" stroke-width="1.5"/>
+              <line x1="7.5" y1="8.5" x2="10.5" y2="15.5" stroke-width="1.5"/>
+              <line x1="16.5" y1="8.5" x2="13.5" y2="15.5" stroke-width="1.5"/>
+            </svg>
+            <span class="partner-name">NEXUS SYNDICATE</span>
+          </div>
+
+          <!-- Custom Vector Brand 5: Aether DeepTech -->
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <polygon points="12 2 21 7 21 17 12 22 3 17 3 7" stroke-width="2"/>
+              <circle cx="12" cy="12" r="3" stroke-width="2"/>
+            </svg>
+            <span class="partner-name">AETHER LABS</span>
+          </div>
+
+          <!-- Custom Vector Brand 6: Prism Global -->
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <polygon points="12 3 2 21 22 21" stroke-width="2"/>
+              <line x1="7" y1="14" x2="17" y2="14" stroke-width="1.5"/>
+            </svg>
+            <span class="partner-name">PRISM GLOBAL</span>
+          </div>
+
+          <!-- Duplicate items for seamless continuous looping -->
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <polygon points="12 2 22 21 2 21" stroke-width="2"/>
+              <line x1="12" y1="8" x2="12" y2="16" stroke-width="2"/>
+            </svg>
+            <span class="partner-name">APEX HORIZON</span>
+          </div>
+
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <path d="M4 4l8 16 8-16-8 6z" stroke-width="2"/>
+            </svg>
+            <span class="partner-name">VANGUARD VENTURES</span>
+          </div>
+
+          <div class="partner-logo-item">
+            <svg class="partner-svg" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" stroke-width="2"/>
+              <line x1="3" y1="12" x2="21" y2="12" stroke-width="2"/>
+            </svg>
+            <span class="partner-name">HORIZON FOUNDRY</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CORE PILLARS (Asymmetrical Bento Grid with Custom SVG Backgrounds)
+         ========================================================================== -->
+    <section id="pillars" class="section-wrapper">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">ENGINEERED FOR FOUNDERS BUILDING CIVILIZATIONAL SCALE</h2>
+        <p class="section-desc">
+          Four distinct catalytic environments designed to accelerate high-conviction founders from thesis validation to hypergrowth execution.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento Card 1: Keynote & Firesides (Span 8) -->
+        <div class="bezel-shell bento-col-8 reveal-on-scroll">
+          <div class="bezel-core">
+            <!-- Custom Geometric SVG Background: Architectural Isometric Grid -->
+            <svg class="card-svg-bg" viewBox="0 0 600 400" preserveAspectRatio="none">
+              <defs>
+                <pattern id="grid-pattern-1" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgb(212, 193, 177)" stroke-width="0.8"/>
+                  <circle cx="40" cy="0" r="1.5" fill="rgb(234, 224, 211)"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid-pattern-1)"/>
+              <circle cx="500" cy="80" r="140" fill="none" stroke="rgb(165, 138, 122)" stroke-width="1" stroke-dasharray="4 4"/>
+              <circle cx="500" cy="80" r="220" fill="none" stroke="rgb(94, 66, 59)" stroke-width="1"/>
+            </svg>
+
+            <div class="bento-card-content">
+              <div>
+                <span class="bento-card-badge">Pillar 01 · Mainstage</span>
+                <h3 class="bento-card-title">Visionary Keynotes & Intimate Firesides</h3>
+                <p class="bento-card-text">
+                  Unvarnished founder debriefs and architectural market forecasts from CEOs who scaled decacorns through brutal macro cycles.
+                </p>
+              </div>
+
+              <div class="bento-metric-row">
+                <div>
+                  <div class="bento-metric-val">45+</div>
+                  <div class="bento-metric-lbl">Fireside Sessions</div>
+                </div>
+                <div>
+                  <div class="bento-metric-val">0%</div>
+                  <div class="bento-metric-lbl">PR Filter / Raw Truth</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: $1M Pitch Arena (Span 4) -->
+        <div class="bezel-shell bento-col-4 reveal-on-scroll">
+          <div class="bezel-core">
+            <!-- Custom Geometric SVG Background: Holographic Radar Sweep -->
+            <svg class="card-svg-bg" viewBox="0 0 300 400" preserveAspectRatio="none">
+              <circle cx="150" cy="200" r="60" fill="none" stroke="rgb(212, 193, 177)" stroke-width="0.75"/>
+              <circle cx="150" cy="200" r="120" fill="none" stroke="rgb(165, 138, 122)" stroke-width="0.75" stroke-dasharray="6 4"/>
+              <circle cx="150" cy="200" r="180" fill="none" stroke="rgb(94, 66, 59)" stroke-width="0.75"/>
+              <line x1="150" y1="20" x2="150" y2="380" stroke="rgb(234, 224, 211)" stroke-width="0.5" stroke-dasharray="2 4"/>
+              <line x1="20" y1="200" x2="280" y2="200" stroke="rgb(234, 224, 211)" stroke-width="0.5" stroke-dasharray="2 4"/>
+            </svg>
+
+            <div class="bento-card-content">
+              <div>
+                <span class="bento-card-badge">Pillar 02 · Arena</span>
+                <h3 class="bento-card-title">The $1M Pitch Arena</h3>
+                <p class="bento-card-text">
+                  Selected early-stage ventures present live to a syndicate of tier-1 institutional partners for immediate SAFE allocations.
+                </p>
+              </div>
+
+              <div class="feature-interactive-tag">
+                <span style="color:var(--c-accent-emerald);">●</span> Live Term Sheets On Stage
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: 1-on-1 Investor Speed Dating (Span 4) -->
+        <div class="bezel-shell bento-col-4 reveal-on-scroll">
+          <div class="bezel-core">
+            <!-- Custom Geometric SVG Background: Connection Constellation -->
+            <svg class="card-svg-bg" viewBox="0 0 300 400" preserveAspectRatio="none">
+              <path d="M 30 50 Q 150 150 270 90 T 250 320" fill="none" stroke="rgb(212, 193, 177)" stroke-width="1"/>
+              <circle cx="30" cy="50" r="4" fill="rgb(234, 224, 211)"/>
+              <circle cx="150" cy="150" r="5" fill="rgb(165, 138, 122)"/>
+              <circle cx="270" cy="90" r="4" fill="rgb(234, 224, 211)"/>
+              <circle cx="250" cy="320" r="6" fill="rgb(212, 193, 177)"/>
+            </svg>
+
+            <div class="bento-card-content">
+              <div>
+                <span class="bento-card-badge">Pillar 03 · Dealflow</span>
+                <h3 class="bento-card-title">Curated 1-on-1 Investor Suites</h3>
+                <p class="bento-card-text">
+                  Algorithmic matching pairs founders with venture partners actively writing checks in your vertical.
+                </p>
+              </div>
+
+              <div class="bento-metric-row">
+                <div>
+                  <div class="bento-metric-val">1,200+</div>
+                  <div class="bento-metric-lbl">Private Meetings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: Masterclass Sprints (Span 8) -->
+        <div class="bezel-shell bento-col-8 reveal-on-scroll">
+          <div class="bezel-core">
+            <!-- Custom Geometric SVG Background: Algorithmic Topography Curves -->
+            <svg class="card-svg-bg" viewBox="0 0 600 400" preserveAspectRatio="none">
+              <path d="M 0 300 C 150 220, 300 380, 450 260 S 600 320, 600 320" fill="none" stroke="rgb(212, 193, 177)" stroke-width="1.2"/>
+              <path d="M 0 250 C 150 170, 300 330, 450 210 S 600 270, 600 270" fill="none" stroke="rgb(165, 138, 122)" stroke-width="1"/>
+              <path d="M 0 200 C 150 120, 300 280, 450 160 S 600 220, 600 220" fill="none" stroke="rgb(94, 66, 59)" stroke-width="0.8"/>
+              <path d="M 0 150 C 150 70, 300 230, 450 110 S 600 170, 600 170" fill="none" stroke="rgb(48, 61, 55)" stroke-width="0.6"/>
+            </svg>
+
+            <div class="bento-card-content">
+              <div>
+                <span class="bento-card-badge">Pillar 04 · Execution</span>
+                <h3 class="bento-card-title">Founder War-Room Masterclasses</h3>
+                <p class="bento-card-text">
+                  Hands-on execution workshops on enterprise GTM velocity, token engineering, defensive IP barriers, and high-leverage talent acquisition.
+                </p>
+              </div>
+
+              <div class="bento-metric-row">
+                <div>
+                  <div class="bento-metric-val">18</div>
+                  <div class="bento-metric-lbl">Tactical Tracks</div>
+                </div>
+                <div>
+                  <div class="bento-metric-val">100%</div>
+                  <div class="bento-metric-lbl">Practical Playbooks</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LIVE PITCH ARENA SIMULATOR (Dynamic Interactive Component)
+         ========================================================================== -->
+    <section id="pitch-arena" class="section-wrapper">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">THE $1M PITCH ARENA SIMULATOR</h2>
+        <p class="section-desc">
+          Inspect the live finalist venture tracks. Switch categories to review founder metrics, real-time syndicate commitments, and simulated term allocations.
+        </p>
+      </div>
+
+      <div class="pitch-arena-container reveal-on-scroll">
+        <!-- Track Selection Column -->
+        <div class="pitch-tracks-list">
+          <div class="pitch-track-card active" data-track-index="0">
+            <div class="pitch-track-header">
+              <span class="pitch-track-name">Autonomous AI & Spatial Agents</span>
+              <span class="pitch-track-tag">Seed Track A</span>
+            </div>
+            <p class="pitch-track-summary">Decentralized spatial memory and multi-agent coordination architecture for embodied robotics.</p>
+          </div>
+
+          <div class="pitch-track-card" data-track-index="1">
+            <div class="pitch-track-header">
+              <span class="pitch-track-name">Modular Clean Fusion & Deep Energy</span>
+              <span class="pitch-track-tag">HardTech Track B</span>
+            </div>
+            <p class="pitch-track-summary">Magnetic confinement micro-reactors delivering zero-emission dispatchable power.</p>
+          </div>
+
+          <div class="pitch-track-card" data-track-index="2">
+            <div class="pitch-track-header">
+              <span class="pitch-track-name">Quantum-Resistant DeFi Infrastructure</span>
+              <span class="pitch-track-tag">Fintech Track C</span>
+            </div>
+            <p class="pitch-track-summary">Sub-millisecond institutional settlement network impervious to state-level cryptanalysis.</p>
+          </div>
+
+          <div class="pitch-track-card" data-track-index="3">
+            <div class="pitch-track-header">
+              <span class="pitch-track-name">Synthetic Biology & Cellular Longevity</span>
+              <span class="pitch-track-tag">BioTech Track D</span>
+            </div>
+            <p class="pitch-track-summary">Epigenetic reprogramming therapeutics targeting systemic senescent stem cell renewal.</p>
+          </div>
+        </div>
+
+        <!-- Live Telemetry Card -->
+        <div class="pitch-live-display">
+          <div class="pitch-display-header">
+            <div class="pitch-status-live">
+              <span style="color:var(--c-accent-emerald);font-size:1.2rem;">●</span>
+              LIVE STAGE TELEMETRY
+            </div>
+            <div id="arena-syndicate-percent" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--c-sand-cream);">
+              88% Committed
+            </div>
+          </div>
+
+          <div class="pitch-display-body">
+            <div>
+              <h3 id="arena-venture-title" class="pitch-venture-title">SynapseScale</h3>
+              <p id="arena-venture-founder" class="pitch-venture-founder">Elena Rostova · Ex-OpenAI Robotics</p>
+            </div>
+
+            <p id="arena-summary" style="font-size:0.95rem;color:var(--c-sand-clay);line-height:1.5;">
+              Decentralized spatial memory and multi-agent coordination architecture for next-gen manufacturing and embodied robots.
+            </p>
+
+            <div class="pitch-metrics-grid">
+              <div class="pitch-metric-box">
+                <span id="arena-metric-val" class="pitch-metric-digit">$48M</span>
+                <span class="pitch-metric-desc">Valuation Cap</span>
+              </div>
+              <div class="pitch-metric-box">
+                <span id="arena-metric1-digit" class="pitch-metric-digit">+380%</span>
+                <span id="arena-metric1-desc" class="pitch-metric-desc">MoM Inference Volume</span>
+              </div>
+              <div class="pitch-metric-box">
+                <span id="arena-metric2-digit" class="pitch-metric-digit">42ms</span>
+                <span id="arena-metric2-desc" class="pitch-metric-desc">Edge Reaction Latency</span>
+              </div>
+            </div>
+
+            <!-- Syndicate Progress Bar -->
+            <div class="syndicate-meter-wrap">
+              <div class="syndicate-labels">
+                <span style="color:var(--c-sand-clay);">Syndicate Round Status</span>
+                <span id="arena-syndicate-raised" style="color:var(--c-sand-cream);font-weight:700;">$5.28M / $6.0M</span>
+              </div>
+              <div class="syndicate-bar-bg">
+                <div id="arena-syndicate-bar" class="syndicate-bar-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+
+            <!-- Interactive Syndicate Allocation Slider -->
+            <div style="background-color:var(--c-mahogany-10);padding:1.25rem;border-radius:var(--radius-inner);border:1px solid var(--c-white-10);margin-top:0.5rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
+                <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--c-sand-cream);text-transform:uppercase;">Simulate SAFE Ticket Allocation:</span>
+                <span id="slider-allocation-value" style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--c-accent-gold);">$250,000</span>
+              </div>
+              <input type="range" id="syndicate-slider" min="25000" max="1500000" step="25000" value="250000" style="width:100%;accent-color:var(--c-sand-cream);cursor:pointer;">
+              <div style="display:flex;justify-content:space-between;margin-top:0.4rem;font-family:var(--font-mono);font-size:0.7rem;color:var(--c-gray-400);">
+                <span>$25k Angel</span>
+                <span id="slider-equity-value" style="color:var(--c-sand-cream);">~0.52% Equity / SAFE Allocation</span>
+                <span>$1.5M Syndicate Lead</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SPEAKERS SHOWCASE (Interactive Filter & Dossier Modal)
+         ========================================================================== -->
+    <section id="speakers" class="section-wrapper">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">VOICES SHAPING THE GLOBAL VENTURE HORIZON</h2>
+        <p class="section-desc">
+          Learn directly from unicorn founders, legendary partners, and breakthrough researchers pushing the frontiers of enterprise capability.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="speakers-filter-bar reveal-on-scroll">
+        <button class="filter-tab active" data-filter="all">All Keynotes</button>
+        <button class="filter-tab" data-filter="vc">Venture Partners</button>
+        <button class="filter-tab" data-filter="founder">Unicorn Founders</button>
+        <button class="filter-tab" data-filter="ai">AI & DeepTech</button>
+      </div>
+
+      <!-- Speakers 4-Column Grid -->
+      <div class="speakers-grid">
+        <!-- Speaker 1: Elena Rostova -->
+        <div class="bezel-shell speaker-card reveal-on-scroll" data-speaker-id="elena" data-category="vc" data-keynote="true">
+          <div class="bezel-core">
+            <div class="speaker-photo-wrap">
+              <img src="assets/speaker_elena.jpg" alt="Elena Rostova Portrait" class="speaker-photo">
+              <span class="speaker-track-tag">Venture Capital</span>
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Elena Rostova</h3>
+              <p class="speaker-role">General Partner · Apex Horizon</p>
+              <p class="speaker-topic">"Frontier AI Moats: What We Are Funding in 2027"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 2: Marcus Chen -->
+        <div class="bezel-shell speaker-card reveal-on-scroll" data-speaker-id="marcus" data-category="founder" data-keynote="true">
+          <div class="bezel-core">
+            <div class="speaker-photo-wrap">
+              <img src="assets/speaker_marcus.jpg" alt="Marcus Chen Portrait" class="speaker-photo">
+              <span class="speaker-track-tag">Founder</span>
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Marcus Chen</h3>
+              <p class="speaker-role">CEO & Founder · Omnispatial AI</p>
+              <p class="speaker-topic">"Zero to $100M ARR in 18 Months: The Agentic Playbook"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 3: Dr. Clara Vance -->
+        <div class="bezel-shell speaker-card reveal-on-scroll" data-speaker-id="clara" data-category="ai" data-keynote="false">
+          <div class="bezel-core">
+            <div class="speaker-photo-wrap">
+              <img src="assets/speaker_clara.jpg" alt="Dr. Clara Vance Portrait" class="speaker-photo">
+              <span class="speaker-track-tag">DeepTech Pioneer</span>
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Dr. Clara Vance</h3>
+              <p class="speaker-role">Chief Scientist · NeuroKinetics</p>
+              <p class="speaker-topic">"Biomimetic Systems & Embodied Intelligence"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 4: David Lindqvist -->
+        <div class="bezel-shell speaker-card reveal-on-scroll" data-speaker-id="david" data-category="founder" data-keynote="true">
+          <div class="bezel-core">
+            <div class="speaker-photo-wrap">
+              <img src="assets/speaker_david.jpg" alt="David Lindqvist Portrait" class="speaker-photo">
+              <span class="speaker-track-tag">Fintech Architect</span>
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">David Lindqvist</h3>
+              <p class="speaker-role">Co-Founder · VaultScale</p>
+              <p class="speaker-topic">"The Sovereign Balance Sheet & Global Liquidity"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CURATED 3-DAY AGENDA (Interactive Timeline & Drawers)
+         ========================================================================== -->
+    <section id="agenda" class="section-wrapper">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">THE 72-HOUR SUMMIT ARCHITECTURE</h2>
+        <p class="section-desc">
+          Every hour is curated to eliminate fluff and deliver maximum intellectual and strategic leverage. Click any session to reveal speaker briefing notes.
+        </p>
+      </div>
+
+      <!-- Day Switcher Bar -->
+      <div class="agenda-day-switcher reveal-on-scroll">
+        <button class="day-tab-btn active" data-day="day1">
+          <span class="day-tab-num">Day 01</span>
+          <span class="day-tab-theme">Disruption & Genesis</span>
+        </button>
+        <button class="day-tab-btn" data-day="day2">
+          <span class="day-tab-num">Day 02</span>
+          <span class="day-tab-theme">Scale, Moats & Hypergrowth</span>
+        </button>
+        <button class="day-tab-btn" data-day="day3">
+          <span class="day-tab-num">Day 03</span>
+          <span class="day-tab-theme">The Arena & Global Launch</span>
+        </button>
+      </div>
+
+      <!-- Day 1 Content -->
+      <div class="agenda-day-content" data-day="day1">
+        <div class="agenda-sessions-list">
+          <div class="session-item reveal-on-scroll">
+            <div class="session-main-row">
+              <div class="session-time-block">
+                <span class="session-time">09:00 AM</span>
+                <span class="session-hall">Grand Auditorium</span>
+              </div>
+              <div class="session-title-wrap">
+                <h3 class="session-title">Opening Keynote: Macro Theses for the 2027 Founder</h3>
+                <span class="session-speaker-inline">Elena Rostova (Apex Horizon)</span>
+              </div>
+              <button class="session-action-btn bookmark-btn" aria-label="Bookmark session">+ Save</button>
+            </div>
+            <div class="session-drawer">
+              An exhaustive analysis of private equity reallocations, compute sovereignty bottlenecks, and why the next generation of multi-billion dollar enterprises will be built with 10x smaller headcount.
+            </div>
+          </div>
+
+          <div class="session-item reveal-on-scroll">
+            <div class="session-main-row">
+              <div class="session-time-block">
+                <span class="session-time">11:30 AM</span>
+                <span class="session-hall">Venture Hall B</span>
+              </div>
+              <div class="session-title-wrap">
+                <h3 class="session-title">SAFE & Seed Syndication: Pricing and Terms in a High-Rate Regime</h3>
+                <span class="session-speaker-inline">Institutional LP Panel</span>
+              </div>
+              <button class="session-action-btn bookmark-btn" aria-label="Bookmark session">+ Save</button>
+            </div>
+            <div class="session-drawer">
+              Practical teardown of pro-rata mechanics, liquidation preferences, and how top founders negotiate clean term sheets without signaling discounts.
+            </div>
+          </div>
+
+          <div class="session-item reveal-on-scroll">
+            <div class="session-main-row">
+              <div class="session-time-block">
+                <span class="session-time">02:30 PM</span>
+                <span class="session-hall">DeepTech Stage</span>
+              </div>
+              <div class="session-title-wrap">
+                <h3 class="session-title">The Physical AI Convergence: Robots, Energy & Actuators</h3>
+                <span class="session-speaker-inline">Dr. Clara Vance (NeuroKinetics)</span>
+              </div>
+              <button class="session-action-btn bookmark-btn" aria-label="Bookmark session">+ Save</button>
+            </div>
+            <div class="session-drawer">
+              Examining the intersection of spatial Foundation models and physical humanoid hardware. Live demonstration of synthetic neural controllers.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 Content -->
+      <div class="agenda-day-content" data-day="day2" style="display: none;">
+        <div class="agenda-sessions-list">
+          <div class="session-item">
+            <div class="session-main-row">
+              <div class="session-time-block">
+                <span class="session-time">09:30 AM</span>
+                <span class="session-hall">Stage Apex</span>
+              </div>
+              <div class="session-title-wrap">
+                <h3 class="session-title">Zero to $100M ARR in 18 Months: The Agentic Playbook</h3>
+                <span class="session-speaker-inline">Marcus Chen (Omnispatial AI)</span>
+              </div>
+              <button class="session-action-btn bookmark-btn">+ Save</button>
+            </div>
+            <div class="session-drawer">
+              The internal operating procedures Omnispatial used to acquire and deploy across 60+ Fortune 100 enterprise customers in under two years.
+            </div>
+          </div>
+
+          <div class="session-item">
+            <div class="session-main-row">
+              <div class="session-time-block">
+                <span class="session-time">01:00 PM</span>
+                <span class="session-hall">Founders Lounge</span>
+              </div>
+              <div class="session-title-wrap">
+                <h3 class="session-title">Curated 1-on-1 Investor Speed Dating</h3>
+                <span class="session-speaker-inline">120+ Active Venture Partners</span>
+              </div>
+              <button class="session-action-btn bookmark-btn">+ Save</button>
+            </div>
+            <div class="session-drawer">
+              Exclusive 15-minute high-density pitches conducted in soundproof private suites. Matchmaking based on thesis alignment and sector interest.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 Content -->
+      <div class="agenda-day-content" data-day="day3" style="display: none;">
+        <div class="agenda-sessions-list">
+          <div class="session-item">
+            <div class="session-main-row">
+              <div class="session-time-block">
+                <span class="session-time">10:00 AM</span>
+                <span class="session-hall">The Colosseum</span>
+              </div>
+              <div class="session-title-wrap">
+                <h3 class="session-title">The $1M Pitch Arena Championship Finals</h3>
+                <span class="session-speaker-inline">Top 8 Finalist Ventures</span>
+              </div>
+              <button class="session-action-btn bookmark-btn">+ Save</button>
+            </div>
+            <div class="session-drawer">
+              Eight finalists take the stage before an all-star judging syndicate. $1,000,000 in immediate equity financing awarded live on stage.
+            </div>
+          </div>
+
+          <div class="session-item">
+            <div class="session-main-row">
+              <div class="session-time-block">
+                <span class="session-time">07:00 PM</span>
+                <span class="session-hall">Skyline Terrace</span>
+              </div>
+              <div class="session-title-wrap">
+                <h3 class="session-title">Alpha Founders Gala & Private Syndicate Dinner</h3>
+                <span class="session-speaker-inline">VIP & Patron Access Only</span>
+              </div>
+              <button class="session-action-btn bookmark-btn">+ Save</button>
+            </div>
+            <div class="session-drawer">
+              An intimate evening overlooking the bay. Fine dining, bespoke cocktails, and closed-door conversations between the summit's foremost participants.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TICKETS & PASS TIERS (Double-Bezel Architecture & Dynamic Total)
+         ========================================================================== -->
+    <section id="passes" class="section-wrapper">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">SECURE YOUR PLACE AMONG THE BUILDERS</h2>
+        <p class="section-desc">
+          Strict attendance caps ensure an uncompromised density of founders and decision-makers. All passes include full keynotes, catering, and networking access.
+        </p>
+      </div>
+
+      <div class="passes-grid reveal-on-scroll">
+        <!-- Pass Tier 1: Founder Pass -->
+        <div class="bezel-shell pass-card">
+          <div class="bezel-core">
+            <div class="pass-header">
+              <span class="pass-tier-badge badge-founder">Early Allocation</span>
+              <h3 class="pass-name">Founder Pass</h3>
+              <p style="font-size:0.9rem;color:var(--c-sand-clay);">For seed and early-stage entrepreneurs building their first or second venture.</p>
+              
+              <div class="pass-price-row">
+                <span class="pass-price">$499</span>
+                <span class="pass-period">/ all 3 days</span>
+              </div>
+            </div>
+
+            <ul class="pass-features-list">
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Full access to all Keynotes & Masterclass tracks</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Access to the $1M Pitch Arena spectator floor</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Alpha Summit app & attendee directory</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>All daily catering, artisan coffee & networking receptions</span>
+              </li>
+            </ul>
+
+            <button class="btn-nested btn-secondary select-tier-btn" data-tier="Founder Pass" data-price="499" style="width:100%;">
+              <span>Select Founder Pass</span>
+              <span class="btn-icon-circle" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pass Tier 2: Executive / VC (Featured) -->
+        <div class="bezel-shell pass-card pass-featured">
+          <div class="bezel-core">
+            <div class="pass-header">
+              <span class="pass-tier-badge badge-vip">Most Popular</span>
+              <h3 class="pass-name">Executive & VC</h3>
+              <p style="font-size:0.9rem;color:var(--c-sand-clay);">For growth founders, fund partners, and angel syndicates seeking proprietary dealflow.</p>
+              
+              <div class="pass-price-row">
+                <span class="pass-price">$1,499</span>
+                <span class="pass-period">/ all 3 days</span>
+              </div>
+            </div>
+
+            <ul class="pass-features-list">
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>All Founder Pass privileges included</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Access to Private 1-on-1 Investor Suites</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Full Pitch Arena live diligence data room</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Reserved front-row seating at Grand Auditorium</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>VIP Opening Night Rooftop Reception invitation</span>
+              </li>
+            </ul>
+
+            <button class="btn-nested btn-primary select-tier-btn" data-tier="Executive & VC" data-price="1499" style="width:100%;">
+              <span>Select Executive Pass</span>
+              <span class="btn-icon-circle" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Pass Tier 3: Alpha VIP Patron -->
+        <div class="bezel-shell pass-card">
+          <div class="bezel-core">
+            <div class="pass-header">
+              <span class="pass-tier-badge badge-vc">Limited to 50</span>
+              <h3 class="pass-name">Alpha VIP Patron</h3>
+              <p style="font-size:0.9rem;color:var(--c-sand-clay);">The ultimate institutional pass: private concierge, backstage lounge, and syndicate table.</p>
+              
+              <div class="pass-price-row">
+                <span class="pass-price">$3,200</span>
+                <span class="pass-period">/ all 3 days</span>
+              </div>
+            </div>
+
+            <ul class="pass-features-list">
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Everything in Executive Pass tier</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Seat at the Alpha Founders Gala & Dinner</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Dedicated concierge & private backstage lounge access</span>
+              </li>
+              <li class="pass-feature-item">
+                <svg class="pass-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Voting rights on Pitch Arena audience syndicate choice</span>
+              </li>
+            </ul>
+
+            <button class="btn-nested btn-secondary select-tier-btn" data-tier="Alpha VIP Patron" data-price="3200" style="width:100%;">
+              <span>Select VIP Patron</span>
+              <span class="btn-icon-circle" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS / VERIFIED FOUNDER SOCIAL PROOF
+         ========================================================================== -->
+    <section class="section-wrapper">
+      <div class="section-header reveal-on-scroll">
+        <h2 class="section-title">TESTED BY EXTRAORDINARY BUILDERS</h2>
+        <p class="section-desc">
+          Hear from alumni founders whose initial summit pitches materialized into category-defining enterprises.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="bezel-shell testimonial-card reveal-on-scroll">
+          <div class="bezel-core">
+            <div class="quote-mark">“</div>
+            <p class="quote-body">
+              "We closed our $4.5M seed round directly from conversations initiated at the AES Pitch Arena. The concentration of high-conviction capital is unmatched anywhere in the world."
+            </p>
+            <div class="author-block">
+              <img src="assets/speaker_clara.jpg" alt="Alumni Founder" class="author-avatar">
+              <div class="author-meta">
+                <span class="author-name">Kavita Sharma</span>
+                <span class="author-title">Co-Founder, Synthetica · $28M Series A</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bezel-shell testimonial-card reveal-on-scroll">
+          <div class="bezel-core">
+            <div class="quote-mark">“</div>
+            <p class="quote-body">
+              "Unlike typical massive conferences full of noise and vanity panels, AES is an engineering masterclass. You leave with contracts, partnerships, and verified frameworks."
+            </p>
+            <div class="author-block">
+              <img src="assets/speaker_marcus.jpg" alt="Alumni Founder" class="author-avatar">
+              <div class="author-meta">
+                <span class="author-name">Henrik Lind</span>
+                <span class="author-title">CEO, NeuralScale Robotics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bezel-shell testimonial-card reveal-on-scroll">
+          <div class="bezel-core">
+            <div class="quote-mark">“</div>
+            <p class="quote-body">
+              "The density of intellectual honesty was invigorating. No staged pitches, just founders dissecting their true unit economics with partners who understand the technology."
+            </p>
+            <div class="author-block">
+              <img src="assets/speaker_david.jpg" alt="Alumni Founder" class="author-avatar">
+              <div class="author-meta">
+                <span class="author-name">Alexandre Dumas</span>
+                <span class="author-title">Partner, Horizon Venture Labs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE FAQ ACCORDION
+         ========================================================================== -->
+    <section id="faq" class="section-wrapper">
+      <div class="section-header reveal-on-scroll" style="text-align: center; margin: 0 auto 3.5rem auto;">
+        <h2 class="section-title">FREQUENTLY ANSWERED QUESTIONS</h2>
+        <p class="section-desc">Everything you need to know regarding admissions, eligibility, and summit logistics.</p>
+      </div>
+
+      <div class="faq-wrap reveal-on-scroll">
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span class="faq-q-text">What is the selection criteria for early-stage founders?</span>
+            <svg class="faq-icon-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer-panel">
+            We prioritize founders building differentiated technology with strong technical moats or demonstrable user velocity. While early traction is encouraged, pre-launch founders with deep technical backgrounds are warmly welcome.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span class="faq-q-text">How does the $1M Pitch Arena selection process operate?</span>
+            <svg class="faq-icon-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer-panel">
+            All registered founders can submit an optional pitch deck application by October 15. Our venture committee selects 20 semi-finalists for private pitch rounds and 8 finalists for the main stage live syndicate.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span class="faq-q-text">Is hybrid or virtual participation supported?</span>
+            <svg class="faq-icon-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer-panel">
+            Yes. All main auditorium keynotes and the Pitch Arena are broadcast live in 4K spatial audio through our encrypted portal, including interactive Q&A and digital 1-on-1 breakout lounges.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span class="faq-q-text">Can I transfer my pass to a co-founder if schedule conflicts occur?</span>
+            <svg class="faq-icon-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer-panel">
+            Passes can be transferred to an accredited co-founder or executive teammate free of charge up to 72 hours before opening day through the self-service attendee portal.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION HERO BANNER
+         ========================================================================== -->
+    <div class="section-wrapper" style="padding-bottom: 2rem;">
+      <div class="final-cta-shell reveal-on-scroll">
+        <h2 class="cta-title">THE FUTURE WILL BE BUILT. <br>WILL YOU BE AT THE TABLE?</h2>
+        <p class="cta-subtext">
+          Join 3,500+ vanguard founders and institutional backers at the most consequential entrepreneurship summit of the year.
+        </p>
+        <a href="#passes" class="btn-nested btn-primary open-register-trigger">
+          <span>Apply For Admissions</span>
+          <span class="btn-icon-circle" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       ARCHITECTURAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <img src="assets/aes-logo.png" alt="AES Logo" class="footer-logo-img">
+        <p class="footer-brand-desc">
+          Alpha Entrepreneurship Summit (AES) is the premier global assembly uniting visionary founders, capital allocators, and transformative deeptech pioneers.
+        </p>
+        <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--c-sand-clay);">
+          Coordinates: 37.7749° N, 122.4194° W · San Francisco, CA
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Summit Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="#hero" class="footer-link">Overview</a></li>
+          <li><a href="#pillars" class="footer-link">Four Pillars</a></li>
+          <li><a href="#pitch-arena" class="footer-link">Pitch Arena</a></li>
+          <li><a href="#speakers" class="footer-link">Keynote Speakers</a></li>
+          <li><a href="#agenda" class="footer-link">Agenda Itinerary</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Legal & Security</h4>
+        <ul class="footer-links-list">
+          <li><a href="#" class="footer-link">Admissions Protocol</a></li>
+          <li><a href="#" class="footer-link">Syndicate Code of Ethics</a></li>
+          <li><a href="#" class="footer-link">Privacy & Data Safeguards</a></li>
+          <li><a href="#" class="footer-link">Carbon Neutral Audit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter-wrap">
+        <h4 class="footer-col-title">Alpha Intel Dispatch</h4>
+        <p style="font-size:0.85rem;color:var(--c-sand-clay);">Receive curated thesis briefs and speaker announcements directly to your terminal.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault();">
+          <input type="email" class="newsletter-input" placeholder="founder@venture.com" required aria-label="Email address">
+          <button type="submit" class="newsletter-submit">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <span>© 2026 Alpha Entrepreneurship Summit. All rights reserved.</span>
+      <span>Forging the next generation of civilizational founders.</span>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: REGISTRATION & APPLICATION DIALOG
+       ========================================================================== -->
+  <div id="registration-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">
+    <div class="modal-dialog">
+      <button id="close-reg-modal" class="modal-close-btn" aria-label="Close registration dialog">✕</button>
+      <h3 id="reg-modal-title" class="modal-title">Apply for Alpha Summit Pass</h3>
+      <p class="modal-desc">Please complete the founder profile below to initiate your admissions review.</p>
+
+      <form id="summit-registration-form">
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" class="form-input" placeholder="Elena Rostova" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Work / Founder Email</label>
+          <input type="email" id="reg-email" class="form-input" placeholder="founder@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-company">Venture / Organization Name</label>
+          <input type="text" id="reg-company" class="form-input" placeholder="Omnispatial Systems Inc." required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-tier-select">Requested Pass Tier</label>
+          <select id="reg-tier-select" class="form-select">
+            <option value="Founder Pass">Founder Pass — $499</option>
+            <option value="Executive & VC">Executive & VC — $1,499</option>
+            <option value="Alpha VIP Patron">Alpha VIP Patron — $3,200</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-nested btn-primary" style="width:100%;justify-content:center;margin-top:1rem;">
+          <span>Submit Application</span>
+          <span class="btn-icon-circle" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: SPEAKER DOSSIER DIALOG
+       ========================================================================== -->
+  <div id="speaker-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-speaker-name">
+    <div class="modal-dialog">
+      <button id="close-speaker-modal" class="modal-close-btn" aria-label="Close speaker dossier">✕</button>
+      
+      <div style="display:flex;gap:1.5rem;align-items:center;margin-bottom:1.5rem;">
+        <img id="modal-speaker-img" src="" alt="Speaker Photo" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:1px solid var(--c-white-20);">
+        <div>
+          <h3 id="modal-speaker-name" class="modal-title" style="margin-bottom:0.2rem;">Speaker Name</h3>
+          <p id="modal-speaker-role" style="font-size:0.9rem;color:var(--c-taupe);">Speaker Role</p>
+        </div>
+      </div>
+
+      <div style="background-color:var(--c-mahogany-10);padding:1rem;border-radius:var(--radius-inner);border:1px solid var(--c-white-10);margin-bottom:1.25rem;">
+        <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--c-sand-cream);text-transform:uppercase;display:block;margin-bottom:0.25rem;">Keynote Presentation:</span>
+        <h4 id="modal-speaker-topic" style="font-size:1.1rem;color:var(--c-sand-alabaster);">Topic</h4>
+        <span id="modal-speaker-time" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--c-accent-gold);margin-top:0.4rem;display:inline-block;">Timing</span>
+      </div>
+
+      <p id="modal-speaker-bio" style="font-size:0.95rem;color:var(--c-sand-clay);line-height:1.6;margin-bottom:1.5rem;">Biography details...</p>
+
+      <button onclick="document.getElementById('speaker-modal').classList.remove('open');document.body.style.overflow='';" class="btn-nested btn-secondary" style="width:100%;justify-content:center;">
+        <span>Return to Summit</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Client Interactivity Logic -->
+  <script src="scripts/app.js"></script>
+</body>
+</html>

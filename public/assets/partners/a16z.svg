@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 40" fill="none">
+  <!-- a16z Badge -->
+  <rect x="8" y="7" width="26" height="26" rx="6" fill="#1B0805" />
+  <text x="13" y="25" font-family="monospace" font-size="12" font-weight="900" fill="#EAE0D3">16</text>
+  <!-- Wordmark -->
+  <text x="42" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" letter-spacing="1" fill="#1B0805">a16z</text>
+</svg>

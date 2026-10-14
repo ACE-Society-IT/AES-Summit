@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" fill="none">
+  <!-- Geometric Lux Lattice 'X' -->
+  <path d="M10 11L26 29M26 11L10 29" stroke="#1B0805" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="18" cy="20" r="3" fill="#D97706"/>
+  <!-- Wordmark -->
+  <text x="36" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5" fill="#1B0805">LUX CAPITAL</text>
+</svg>

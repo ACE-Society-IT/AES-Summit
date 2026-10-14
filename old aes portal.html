@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AES: Alpha Entrepreneurship Summit | Fostering Future Founders</title>
+    <meta name="description"
+        content="Join the next generation of founders at the Alpha Entrepreneurship Summit (AES). Engage with industry leaders, develop your skills in high-stakes simulations, and launch your innovative ideas.">
+    <link rel="canonical" href="https://www.alphaace.com.pk/">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alphaace.com.pk//">
+    <meta property="og:title" content="AES: Alpha Entrepreneurship Summit | Fostering Future Founders">
+    <meta property="og:description"
+        content="Engage with industry leaders, develop your skills in high-stakes simulations, and launch your innovative ideas.">
+    <meta property="og:image" content="https://www.alphaace.com.pk//img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.alphaace.com.pk//">
+    <meta name="twitter:title" content="AES: Alpha Entrepreneurship Summit | Fostering Future Founders">
+    <meta name="twitter:description"
+        content="Engage with industry leaders, develop your skills in high-stakes simulations, and launch your innovative ideas.">
+    <meta name="twitter:image" content="https://www.alphaace.com.pk//img/og-image.png">
+    <meta name="theme-color" content="#1b0805">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Alpha Entrepreneurship Summit (AES)",
+      "startDate": "2025-11-07T09:00-05:00",
+      "endDate": "2025-11-09T17:00-05:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Convention Center",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Innovation Drive",
+          "addressLocality": "Karachi",
+          "postalCode": "75500",
+          "addressRegion": "Sindh",
+          "addressCountry": "PK"
+        }
+      },
+      "image": [
+        "https://www.alphaace.com.pk/img/og-image.png"
+       ],
+      "description": "The premier event for the next generation of founders. Engage with industry leaders, develop practical skills in high-stakes simulations, and launch your innovative ideas.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Alpha Entrepreneurship Summit",
+        "url": "https://www.alphaace.com.pk/"
+      }
+    }
+    </script>
+
+    <style>
+        /* Custom CSS */
+        html,
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #1b0805;
+            color: #D4C1B1;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .main-content-bg {
+            background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(64, 43, 40, 0.8), rgba(64, 43, 40, 0));
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #EBDCB2, #D8B28E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .gradient-button {
+            background-image: linear-gradient(to right, #7D574F, #5E423B, #4D322B);
+            transition: all 0.3s ease;
+        }
+
+        .gradient-button:hover {
+            box-shadow: 0 0 25px rgba(94, 66, 59, 0.5);
+        }
+
+        .carousel-track {
+            width: calc(22rem * 12);
+            animation: scroll 60s linear infinite;
+            will-change: transform;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(calc(-22rem * 6));
+            }
+        }
+
+        .wavy-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150vw;
+            height: 150vw;
+            max-width: 1600px;
+            max-height: 1600px;
+            transform: translate(-50%, -50%);
+            background: conic-gradient(from 0deg at 50% 50%, #5E423B, #A58A7A, #B2A298, #D8B28E, #917A6D, #6F5A50, #5E423B);
+            filter: blur(80px) saturate(1.2);
+            opacity: 0.15;
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .shimmer-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease-in-out;
+        }
+
+        .shimmer-effect:hover::before {
+            left: 100%;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1b0805;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #5E423B;
+            border-radius: 10px;
+            border: 2px solid #1b0805;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #7D574F;
+        }
+
+        /* Spotlight Effect CSS */
+        #modules-grid {
+            position: relative;
+        }
+
+        #modules-grid:hover::after {
+            opacity: 1;
+        }
+
+        #modules-grid::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle 350px at var(--mouse-x, -350px) var(--mouse-y, -350px), rgba(165, 138, 122, 0.15), transparent 80%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-out;
+        }
+
+        .spotlight-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            /* Match card rounding */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgba(165,138,122,0.15)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+            mask-image: radial-gradient(circle 250px at var(--card-mouse-x, -250px) var(--card-mouse-y, -250px), black 0%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle 250px at var(--card-mouse-x, -250px) var(--card-mouse-y, -250px), black 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .spotlight-card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 pt-2 transition-all duration-500 ease-in-out">
+        <div id="nav-container" class="w-full mx-auto transition-all duration-500 ease-in-out">
+            <nav id="nav-bg"
+                class="bg-transparent w-full h-20 px-6 flex justify-between items-center transition-all duration-500 ease-in-out">
+                <a id="nav-logo" href="index.html">
+                    <img id="nav-logo-img" src="img/aes.png" alt="AES Logo" class="h-10 w-auto">
+                </a>
+
+                <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-8">
+                    <a href="index.html"
+                        class="nav-link font-semibold text-gray-300 hover:text-white transition-colors duration-300">HOME</a>
+                    <a href="about.html"
+                        class="nav-link font-semibold text-gray-300 hover:text-white transition-colors duration-300">ABOUT
+                        US</a>
+                    <a href="faqs.html"
+                        class="nav-link font-semibold text-gray-300 hover:text-white transition-colors duration-300">FAQs</a>
+
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a id="nav-register-btn" href="register.html"
+                        class="shimmer-effect bg-white text-black font-bold px-6 py-3 rounded-full hover:bg-gray-200 transition-all duration-300">Register</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="text-white focus:outline-none transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-sidebar-overlay"
+        class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out md:hidden">
+    </div>
+    <div id="mobile-sidebar"
+        class="fixed top-0 left-0 h-full w-64 bg-white/80 backdrop-blur-lg z-[70] transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-black">AES</h2>
+                <button id="close-sidebar-button" class="text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4">
+                <a href="index.html" class="font-semibold text-gray-700 hover:text-black transition-colors">HOME</a>
+                <a href="about.html" class="font-semibold text-gray-700 hover:text-black transition-colors">ABOUT US</a>
+                <a href="faqs.html" class="font-semibold text-gray-700 hover:text-black transition-colors">FAQs</a>
+                <a href="https://forms.gle/gwtfghBWs5qqqm2m6"
+                    class="font-semibold text-gray-700 hover:text-black transition-colors">Brand Ambassador</a>
+                <a href="benefits.html"
+                    class="font-semibold text-gray-700 hover:text-black transition-colors">Benifits</a>
+
+
+                <hr class="border-gray-300" />
+                <a href="register.html"
+                    class="shimmer-effect bg-black text-white text-center font-bold px-6 py-3 rounded-full hover:bg-gray-800 transition-colors">Register</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <main class="main-content-bg">
+        <header class="text-center pt-48 pb-16 relative z-10 overflow-hidden">
+            <div class="absolute inset-0 z-0"
+                style="background: linear-gradient(to bottom, rgba(64, 43, 40, 0.7) 0%, rgba(64, 43, 40, 0.2) 50%, rgba(64, 43, 40, 0) 100%);">
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h1 class="sr-only">AES: Alpha Entrepreneurship Summit</h1>
+                <img src="img/aes.png" alt="Alpha Entrepreneurship Summit Logo" class="mx-auto w-full max-w-sm">
+                <p class="mt-4 text-2xl md:text-3xl font-semibold text-[#D4C1B1]">Alpha Entrepreneurship Summit</p>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-[#A58A7A]">
+                    Join the next generation of founders at our flagship event. Engage with industry leaders, develop
+                    your skills, and launch your innovative ideas.
+                </p>
+
+                <div class="mt-10 flex justify-center gap-4 text-center">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 w-24 border border-white/20">
+                        <p class="text-3xl font-extrabold text-white">07</p>
+                        <p class="text-sm font-semibold text-gray-300">NOV</p>
+                        <p class="text-xs text-gray-400">FRIDAY</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 w-24 border border-white/20">
+                        <p class="text-3xl font-extrabold text-white">08</p>
+                        <p class="text-sm font-semibold text-gray-300">NOV</p>
+                        <p class="text-xs text-gray-400">SATURDAY</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 w-24 border border-white/20">
+                        <p class="text-3xl font-extrabold text-white">09</p>
+                        <p class="text-sm font-semibold text-gray-300">NOV</p>
+                        <p class="text-xs text-gray-400">SUNDAY</p>
+                    </div>
+                </div>
+
+                <a href="register.html"
+                    class="shimmer-effect mt-8 inline-block px-8 py-4 text-lg font-bold text-white rounded-full gradient-button">
+                    Register Now
+                </a>
+            </div>
+        </header>
+
+        <section class="relative h-[600px] w-full mt-10 flex items-center justify-center overflow-hidden"
+            aria-label="Event Highlights Carousel">
+            <div class="wavy-background"></div>
+
+            <div class="absolute top-1/2 -translate-y-1/2 flex items-center carousel-track">
+                <div class="w-80 h-[450px] bg-[#EAE0D3] text-black rounded-2xl shadow-xl mx-4 p-6 flex-shrink-0">
+                    <p class="font-bold">Insightful Keynotes</p>
+                    <p class="text-sm text-gray-600">Learn from the titans of industry and successful founders who have
+                        shaped the future.</p>
+                </div>
+                <div class="w-80 h-[450px] bg-[#303D37] text-white rounded-2xl shadow-xl mx-4 p-6 flex-shrink-0">
+                    <p class="font-bold">Hands-On Workshops</p>
+                    <p class="text-sm text-[#A58A7A]">Develop practical, real-world skills in finance, marketing, and
+                        product development.</p>
+                </div>
+                <div class="w-80 h-[450px] bg-[#EAE0D3] rounded-2xl shadow-xl mx-4 flex-shrink-0 overflow-hidden">
+                    <img src="img/IF2025.jpg" loading="lazy" class="w-full h-full object-cover" alt="">
+                </div>
+                <div
+                    class="w-80 h-[450px] bg-gradient-to-br from-rose-500 to-amber-600 rounded-2xl shadow-xl mx-4 p-6 flex items-center justify-center flex-shrink-0 text-white">
+                    <h3 class="text-5xl font-bold text-center">The Pitch Competition</h3>
+                </div>
+                <div class="w-80 h-[450px] bg-[#EAE0D3] rounded-2xl shadow-xl mx-4 flex-shrink-0 overflow-hidden">
+                    <img src="img/if2025_2.jpg" loading="lazy" class="w-full h-full object-cover" alt="">
+                </div>
+                <div class="w-80 h-[450px] bg-[#F8F4ED] rounded-2xl shadow-xl mx-4 p-6 flex-shrink-0 text-black">
+                    <p class="font-bold">Networking Hub</p>
+                    <p class="text-sm text-gray-600">Connect with a diverse network of mentors, investors, and talented
+                        peers.</p>
+                </div>
+
+                <div class="w-80 h-[450px] bg-[#EAE0D3] text-black rounded-2xl shadow-xl mx-4 p-6 flex-shrink-0">
+                    <p class="font-bold">Insightful Keynotes</p>
+                    <p class="text-sm text-gray-600">Learn from the titans of industry and successful founders who have
+                        shaped the future.</p>
+                </div>
+                <div class="w-80 h-[450px] bg-[#303D37] text-white rounded-2xl shadow-xl mx-4 p-6 flex-shrink-0">
+                    <p class="font-bold">Hands-On Workshops</p>
+                    <p class="text-sm text-[#A58A7A]">Develop practical, real-world skills in finance, marketing, and
+                        product development.</p>
+                </div>
+                <div class="w-80 h-[450px] bg-[#EAE0D3] rounded-2xl shadow-xl mx-4 flex-shrink-0 overflow-hidden">
+                    <img src="img/IF2025.jpg" loading="lazy" class="w-full h-full object-cover" alt="">
+                </div>
+                <div
+                    class="w-80 h-[450px] bg-gradient-to-br from-rose-500 to-amber-600 rounded-2xl shadow-xl mx-4 p-6 flex items-center justify-center flex-shrink-0 text-white">
+                    <h3 class="text-5xl font-bold text-center">The Pitch Competition</h3>
+                </div>
+                <div class="w-80 h-[450px] bg-[#EAE0D3] rounded-2xl shadow-xl mx-4 flex-shrink-0 overflow-hidden">
+                    <img src="img/if2025_2.jpg" loading="lazy" class="w-full h-full object-cover" alt="">
+                </div>
+                <div class="w-80 h-[450px] bg-[#F8F4ED] rounded-2xl shadow-xl mx-4 p-6 flex-shrink-0 text-black">
+                    <p class="font-bold">Networking Hub</p>
+                    <p class="text-sm text-gray-600">Connect with a diverse network of mentors, investors, and talented
+                        peers.</p>
+                </div>
+            </div>
+
+            <div class="absolute w-11/12 max-w-3xl bg-black rounded-2xl shadow-2xl p-8 md:p-12 text-left z-10">
+                <div class="flex justify-between items-start text-[#A58A7A] text-xs md:text-sm">
+                    <p class="uppercase">Fostering Innovation <br> & Entrepreneurial <br> Leadership</p>
+                    <div class="flex items-center space-x-4 md:space-x-6">
+                        <span class="hidden md:inline">SPEAKERS</span>
+                        <span class="hidden md:inline">AGENDA</span>
+                        <span class="hidden md:inline">ABOUT</span>
+                        <span class="px-3 py-1 border border-[#7D574F] rounded-full whitespace-nowrap">REGISTER</span>
+                    </div>
+                </div>
+                <div class="mt-16 text-[#D4C1B1]">
+                    <p class="text-3xl md:text-5xl leading-tight">This is where <span class="font-bold">ambition meets
+                            opportunity.</span> A platform to develop your ideas, build your network, and forge the
+                        future.</p>
+                    <p class="mt-8 text-3xl md:text-5xl text-[#A58A7A]">Your journey starts here.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="bg-[#F8F4ED] py-24 sm:py-32">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-5 lg:gap-16 items-center">
+                <div class="lg:col-span-2 text-center lg:text-left mb-12 lg:mb-0">
+                    <h2 class="text-4xl font-bold tracking-tight text-[#402B28] sm:text-5xl">Our Vision</h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">
+                        To cultivate a vibrant ecosystem that nurtures innovation and empowers a new generation of
+                        entrepreneurs. We aim to bridge the gap between academia and industry, providing a premier
+                        platform for talented individuals to connect, learn, and launch ventures that drive positive
+                        change.
+                    </p>
+                </div>
+                <div class="lg:col-span-3">
+                    <dl class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-white shadow-sm">
+                                <i class="bi bi-stars text-xl text-[#5E423B]"></i>
+                            </div>
+                            <div>
+                                <dt class="font-bold text-[#402B28]">Vibrant Ecosystem</dt>
+                                <dd class="mt-1 text-gray-600">Nurture innovation, creativity, and entrepreneurship.
+                                </dd>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-white shadow-sm">
+                                <i class="bi bi-rocket-takeoff text-xl text-[#5E423B]"></i>
+                            </div>
+                            <div>
+                                <dt class="font-bold text-[#402B28]">Empower Founders</dt>
+                                <dd class="mt-1 text-gray-600">Empower young entrepreneurs to turn their unique ideas
+                                    into reality.</dd>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-white shadow-sm">
+                                <i class="bi bi-graph-up-arrow text-xl text-[#5E423B]"></i>
+                            </div>
+                            <div>
+                                <dt class="font-bold text-[#402B28]">Drive Growth</dt>
+                                <dd class="mt-1 text-gray-600">Drive positive change and sustainable growth in
+                                    respective fields.</dd>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-white shadow-sm">
+                                <i class="bi bi-link-45deg text-xl text-[#5E423B]"></i>
+                            </div>
+                            <div>
+                                <dt class="font-bold text-[#402B28]">Bridge The Gap</dt>
+                                <dd class="mt-1 text-gray-600">Bridge the gap between academia and the professional
+                                    industry.</dd>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-white shadow-sm">
+                                <i class="bi bi-people text-xl text-[#5E423B]"></i>
+                            </div>
+                            <div>
+                                <dt class="font-bold text-[#402B28]">Connect & Thrive</dt>
+                                <dd class="mt-1 text-gray-600">Provide a platform for talented individuals to connect,
+                                    learn, and thrive.</dd>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-white shadow-sm">
+                                <i class="bi bi-shield-check text-xl text-[#5E423B]"></i>
+                            </div>
+                            <div>
+                                <dt class="font-bold text-[#402B28]">Build Confidence</dt>
+                                <dd class="mt-1 text-gray-600">Equip participants with the knowledge and confidence to
+                                    excel.</dd>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-6 lg:px-8 text-center">
+            <h2
+                class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight max-w-3xl mx-auto text-[#402B28]">
+                Our Flagship Modules
+            </h2>
+            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                Dive into our series of high-stakes simulations, each designed to test your strategy, creativity, and
+                leadership under pressure.
+            </p>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left" id="modules-grid">
+
+                <div
+                    class="spotlight-card bg-[#1b0805] border border-[#5E423B] text-white rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden min-h-[320px] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#7D574F]">
+                    <div class="relative z-10">
+                        <i class="bi bi-graph-up-arrow text-3xl text-red-400 mb-4"></i>
+                        <p class="text-sm font-bold uppercase gradient-text">FINANCE & STRATEGY</p>
+                        <h3 class="mt-2 text-3xl font-bold text-white">Investomania</h3>
+                        <p class="mt-2 text-gray-400">Step into the shoes of investors navigating volatile markets,
+                            insider leaks, and financial crises—adapt, trade, and survive!</p>
+                    </div>
+                    <a href="register.html"
+                        class="mt-6 inline-flex items-center border border-[#7D574F] text-gray-300 px-5 py-3 rounded-full text-sm font-medium self-start hover:bg-[#7D574F] hover:text-white transition-colors relative z-10">
+                        Register
+                        <i class="bi bi-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="spotlight-card bg-[#1b0805] border border-[#5E423B] text-white rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden min-h-[320px] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#7D574F]">
+                    <div class="relative z-10">
+                        <i class="bi bi-trophy text-3xl text-blue-400 mb-4"></i>
+                        <p class="text-sm font-bold uppercase gradient-text">BUSINESS ACUMEN</p>
+                        <h3 class="mt-2 text-3xl font-bold text-white">Market Monopoly</h3>
+                        <p class="mt-2 text-gray-400">Compete, trade, and build empires in a fast-paced twist on the
+                            classic board game—bid, negotiate, and outsmart rivals to dominate the market!</p>
+                    </div>
+                    <a href="register.html"
+                        class="mt-6 inline-flex items-center border border-[#7D574F] text-gray-300 px-5 py-3 rounded-full text-sm font-medium self-start hover:bg-[#7D574F] hover:text-white transition-colors relative z-10">
+                        Register
+                        <i class="bi bi-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="spotlight-card bg-[#1b0805] border border-[#5E423B] text-white rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden min-h-[320px] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#7D574F]">
+                    <div class="relative z-10">
+                        <i class="bi bi-lightbulb text-3xl text-green-400 mb-4"></i>
+                        <p class="text-sm font-bold uppercase gradient-text">INNOVATION & PITCHING</p>
+                        <h3 class="mt-2 text-3xl font-bold text-white">Planning Prism</h3>
+                        <p class="mt-2 text-gray-400">Design bold business solutions to global crises, pitch to
+                            investors, and battle through intense rounds testing creativity, strategy, and teamwork!</p>
+                    </div>
+                    <a href="register.html"
+                        class="mt-6 inline-flex items-center border border-[#7D574F] text-gray-300 px-5 py-3 rounded-full text-sm font-medium self-start hover:bg-[#7D574F] hover:text-white transition-colors relative z-10">
+                        Register
+                        <i class="bi bi-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="spotlight-card bg-[#1b0805] border border-[#5E423B] text-white rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden min-h-[320px] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#7D574F]">
+                    <div class="relative z-10">
+                        <i class="bi bi-shield-shaded text-3xl text-purple-400 mb-4"></i>
+                        <p class="text-sm font-bold uppercase gradient-text">CRISIS MANAGEMENT</p>
+                        <h3 class="mt-2 text-3xl font-bold text-white">Defend the Empire</h3>
+                        <p class="mt-2 text-gray-400">Take charge as HR and PR strategists—manage crises, handle media
+                            backlash, and craft recovery plans to save your company from collapse!</p>
+                    </div>
+                    <a href="register.html"
+                        class="mt-6 inline-flex items-center border border-[#7D574F] text-gray-300 px-5 py-3 rounded-full text-sm font-medium self-start hover:bg-[#7D574F] hover:text-white transition-colors relative z-10">
+                        Register
+                        <i class="bi bi-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="spotlight-card bg-[#1b0805] border border-[#5E423B] text-white rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden min-h-[320px] lg:col-span-2 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#7D574F]">
+                    <div class="relative z-10">
+                        <i class="bi bi-megaphone text-3xl text-yellow-400 mb-4"></i>
+                        <p class="text-sm font-bold uppercase gradient-text">MARKETING & BRANDING</p>
+                        <h3 class="mt-2 text-3xl font-bold text-white">Viral Velocity</h3>
+                        <p class="mt-2 text-gray-400">Revive failed products, tackle brand scandals, and create
+                            futuristic innovations in a high-speed simulation blending marketing, strategy, and
+                            creativity.</p>
+                    </div>
+                    <a href="register.html"
+                        class="mt-6 inline-flex items-center border border-[#7D574F] text-gray-300 px-5 py-3 rounded-full text-sm font-medium self-start hover:bg-[#7D574F] hover:text-white transition-colors relative z-10">
+                        Register
+                        <i class="bi bi-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1b0805] text-[#A58A7A]">
+        <div class="container mx-auto px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-y-4">
+                <div class="flex items-center gap-x-8">
+                    <a href="index.html">
+                        <img src="img/aes.png" alt="AES Footer Logo" class="h-6 w-auto">
+                    </a>
+                    <nav class="hidden md:flex items-center gap-x-8">
+                        <a href="benefits.html"
+                            class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Benefits</a>
+                        <a href="register.html"
+                            class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Register</a>
+                        <a href="#"
+                            class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Resources</a>
+                        <a href="faqs.html"
+                            class="text-sm font-medium text-gray-400 hover:text-white transition-colors">FAQs</a>
+                        <a href="https://forms.gle/gwtfghBWs5qqqm2m6"
+                            class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Brand
+                            Ambassador</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-x-6">
+                    <a href="https://www.instagram.com/aes_summit?igsh=MTc4ZGtvN2h3b3c0Zg%3D%3D&utm_source=qr"
+                        target="_blank" rel="noopener noreferrer"
+                        class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                        <i class="bi bi-instagram text-lg"></i>
+                    </a>
+                    <a href="https://chat.whatsapp.com/CjfnlmGRHsBDE20lxXXr81?mode=wwt" target="_blank"
+                        rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"
+                        aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-sm text-[#A58A7A]/60">&copy; 2025 Alpha Entrepreneurship Summit. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <div id="cookie-modal"
+        class="fixed bottom-6 right-6 w-full max-w-sm p-6 rounded-2xl shadow-2xl z-[80] transition-all duration-500 translate-y-20 opacity-0"
+        style="background: rgba(248, 244, 237, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(64, 43, 40, 0.1);">
+        <div class="flex items-start space-x-4">
+            <i class="bi bi-cookie text-4xl text-[#5E423B] mt-1"></i>
+            <div>
+                <h4 class="font-bold text-lg text-[#402B28]">We value your privacy</h4>
+                <p class="text-sm mt-1 text-[#6F5A50]">We use cookies to enhance your browsing experience and analyze
+                    our traffic. By clicking "Accept", you consent to our use of cookies.</p>
+            </div>
+        </div>
+        <div class="mt-6 flex justify-end space-x-4">
+            <button id="decline-cookies"
+                class="text-sm font-semibold text-[#A58A7A] hover:text-[#402B28] transition-colors">Decline</button>
+            <button id="accept-cookies"
+                class="text-sm font-bold bg-[#402B28] text-white px-5 py-2 rounded-full hover:bg-[#5E423B] transition-colors">Accept</button>
+        </div>
+    </div>
+
+    <div id="ambassador-modal-overlay"
+        class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out">
+        <div id="ambassador-modal-content"
+            class="relative max-w-lg w-full bg-transparent rounded-2xl shadow-xl transform scale-95 opacity-0 transition-all duration-300 ease-in-out">
+            <button id="close-ambassador-modal"
+                class="absolute -top-3 -right-3 z-10 w-9 h-9 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-black hover:bg-white transition-transform hover:scale-110 focus:outline-none"
+                aria-label="Close modal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <a href="https://forms.gle/gwtfghBWs5qqqm2m6" target="_blank" rel="noopener noreferrer"
+                class="block rounded-2xl overflow-hidden">
+                <img src="img/brand-ambassador.jpg" alt="Become a Brand Ambassador for AES" class="w-full h-auto">
+            </a>
+        </div>
+    </div>
+    <script>
+        // --- Navbar Logic ---
+        const navContainer = document.getElementById('nav-container');
+        const navBg = document.getElementById('nav-bg');
+        const navLogoImg = document.getElementById('nav-logo-img');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navRegisterBtn = document.getElementById('nav-register-btn');
+        const hamburgerBtn = document.getElementById('hamburger-button');
+
+        function handleNavbarState() {
+            const isScrolled = window.scrollY > 50;
+            const isDesktop = window.innerWidth >= 768;
+
+            if (isScrolled) {
+                navLogoImg.src = 'img/aes-black.png';
+            } else {
+                navLogoImg.src = 'img/aes.png';
+            }
+
+            if (isDesktop) {
+                if (isScrolled) {
+                    navContainer.classList.add('md:w-[70%]');
+                    navBg.classList.add('rounded-full', 'bg-white', 'shadow-xl');
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-gray-300', 'hover:text-white');
+                        link.classList.add('text-gray-600', 'hover:text-black');
+                    });
+
+                    navRegisterBtn.classList.remove('bg-white', 'text-black');
+                    navRegisterBtn.classList.add('bg-black', 'text-white');
+                } else {
+                    navContainer.classList.remove('md:w-[70%]');
+                    navBg.classList.remove('rounded-full', 'bg-white', 'shadow-xl');
+
+                    navLinks.forEach(link => {
+                        link.classList.add('text-gray-300', 'hover:text-white');
+                        link.classList.remove('text-gray-600', 'hover:text-black');
+                    });
+
+                    navRegisterBtn.classList.add('bg-white', 'text-black');
+                    navRegisterBtn.classList.remove('bg-black', 'text-white');
+                }
+            } else {
+                navContainer.classList.remove('md:w-[70%]');
+                navBg.classList.remove('rounded-full');
+
+                if (isScrolled) {
+                    navBg.classList.add('bg-white', 'shadow-md');
+                    hamburgerBtn.classList.remove('text-white');
+                    hamburgerBtn.classList.add('text-black');
+                } else {
+                    navBg.classList.remove('bg-white', 'shadow-md');
+                    hamburgerBtn.classList.add('text-white');
+                    hamburgerBtn.classList.remove('text-black');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleNavbarState);
+        window.addEventListener('resize', handleNavbarState);
+        document.addEventListener('DOMContentLoaded', handleNavbarState);
+
+        // --- Mobile Sidebar Logic ---
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const closeSidebarButton = document.getElementById('close-sidebar-button');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+        const sidebarOverlay = document.getElementById('mobile-sidebar-overlay');
+
+        function openSidebar() {
+            mobileSidebar.classList.remove('-translate-x-full');
+            sidebarOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeSidebar() {
+            mobileSidebar.classList.add('-translate-x-full');
+            sidebarOverlay.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        hamburgerButton.addEventListener('click', openSidebar);
+        closeSidebarButton.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+
+        // --- Cookie Modal Logic ---
+        const cookieModal = document.getElementById('cookie-modal');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+        const declineCookiesBtn = document.getElementById('decline-cookies');
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function showCookieModal() {
+            cookieModal.classList.remove('translate-y-20', 'opacity-0');
+        }
+
+        function hideCookieModal() {
+            cookieModal.classList.add('opacity-0');
+            setTimeout(() => {
+                cookieModal.style.display = 'none';
+            }, 500);
+        }
+
+        acceptCookiesBtn.addEventListener('click', () => {
+            setCookie('cookie_consent', 'accepted', 365);
+            hideCookieModal();
+        });
+
+        declineCookiesBtn.addEventListener('click', () => {
+            setCookie('cookie_consent', 'declined', 365);
+            hideCookieModal();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!getCookie('cookie_consent')) {
+                setTimeout(showCookieModal, 2000);
+            }
+        });
+
+        // --- Spotlight Effect Logic ---
+        const modulesGrid = document.getElementById('modules-grid');
+        const spotlightCards = document.querySelectorAll('.spotlight-card');
+
+        if (modulesGrid) {
+            modulesGrid.addEventListener('mousemove', (e) => {
+                const rect = modulesGrid.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                modulesGrid.style.setProperty('--mouse-x', `${x}px`);
+                modulesGrid.style.setProperty('--mouse-y', `${y}px`);
+
+                spotlightCards.forEach(card => {
+                    const cardRect = card.getBoundingClientRect();
+                    const cardX = e.clientX - cardRect.left;
+                    const cardY = e.clientY - cardRect.top;
+                    card.style.setProperty('--card-mouse-x', `${cardX}px`);
+                    card.style.setProperty('--card-mouse-y', `${cardY}px`);
+                });
+            });
+        }
+
+        // --- NEW: Ambassador Modal Logic ---
+        const ambassadorOverlay = document.getElementById('ambassador-modal-overlay');
+        const ambassadorContent = document.getElementById('ambassador-modal-content');
+        const closeAmbassadorBtn = document.getElementById('close-ambassador-modal');
+
+        function openAmbassadorModal() {
+            // Don't show again if it has already been shown in the current session
+            if (sessionStorage.getItem('ambassadorModalShown')) return;
+
+            ambassadorOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            ambassadorContent.classList.remove('scale-95', 'opacity-0');
+            sessionStorage.setItem('ambassadorModalShown', 'true');
+        }
+
+        function closeAmbassadorModal() {
+            ambassadorContent.classList.add('scale-95', 'opacity-0');
+            ambassadorOverlay.classList.add('opacity-0');
+            // Wait for CSS transition to finish before disabling pointer events
+            setTimeout(() => {
+                ambassadorOverlay.classList.add('pointer-events-none');
+            }, 300);
+        }
+
+        // Show the modal 4 seconds after the page has loaded
+        setTimeout(openAmbassadorModal, 4000);
+
+        // Event Listeners to close the modal
+        closeAmbassadorBtn.addEventListener('click', closeAmbassadorModal);
+        ambassadorOverlay.addEventListener('click', (event) => {
+            // Close the modal only if the click is on the overlay itself, not on the content inside it
+            if (event.target === ambassadorOverlay) {
+                closeAmbassadorModal();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
