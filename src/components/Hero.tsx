@@ -124,11 +124,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
           />
         </div>
 
-        {/* Alpha Entrepreneurship Summit with Text Color Changing Animation */}
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-center leading-[1.1] mb-6 sm:mb-8 font-sans max-w-5xl">
-          <span className="text-shimmer-brand font-black drop-shadow-[0_10px_35px_rgba(245,184,149,0.35)]">
-            Alpha Entrepreneurship Summit
-          </span>
+        {/* Alpha Entrepreneurship Summit Clean Professional Typography */}
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-center leading-[1.1] mb-6 sm:mb-8 font-sans max-w-5xl text-[#FAF5EE] drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+          Alpha Entrepreneurship Summit
         </h1>
 
         {/* Centered Subtitle */}
