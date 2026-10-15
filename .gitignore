@@ -37,3 +37,5 @@ Thumbs.db
 
 # Agent/scratch metadata
 .agents/
+
+.vercel

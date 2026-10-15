@@ -123,19 +123,18 @@ void main() {
   float peaks2 = dbn(p + distort2 - dir * (t * spd * 0.5), 40.0, 0.0);
   float field = smin(peaks, peaks2, max(uFluidity, 0.001));
 
+  // Exact geometric distance in screen pixels from contour line
   float slope = length(vec2(dFdx(field), dFdy(field)));
   float gap = abs(field - 0.4);
   float pixels = gap / max(slope, 1e-6);
-  float halfBand = max(uRimWidth, 0.001) * 0.5;
-  float across = max(gap / halfBand, pixels / uMaxHalf);
-  float band = 5.0 * uRimWidth * (1.0 - across);
-  float reveal = smoothstep(0.2, 0.85, pull);
-  float shimmer = vn(p + dir * (t * spd * 0.5), 60.0, 12.0) * uShimmer * (1.0 - reveal * 0.75);
-  float lit = clamp(band - shimmer, 0.0, 1.0);
-  float glow = pow(lit, uSharpness) * uGlow * (1.0 + reveal * 0.25);
-  float core = uLine > 0.0 ? smoothstep(uLine + 0.75, uLine - 0.75, pixels) * max(smoothstep(0.08, 0.6, glow), reveal) : 0.0;
-  float shine = clamp(glow, 0.0, 1.0);
-  float energy = max(shine * shine, core * 0.85) * uReveal;
+
+  // Razor-sharp vector contour line with sub-pixel antialiasing
+  float lineW = max(0.85, uLine);
+  float lineAlpha = smoothstep(lineW + 0.75, max(0.0, lineW - 0.75), pixels);
+
+  // Tight, delicate luminance edge that enhances clarity without blurry wash
+  float tightGlow = exp(-pixels * 0.28) * min(uGlow * 0.3, 0.45);
+  float energy = clamp(lineAlpha + tightGlow, 0.0, 1.0) * uReveal;
 
   float h = clamp(0.5 + (peaks - peaks2) * 0.8, 0.0, 1.0);
   vec3 tint = palette(h);
@@ -212,6 +211,7 @@ export interface FluxLinesProps {
   backgroundColor?: string;
   className?: string;
   style?: React.CSSProperties;
+  dpr?: number;
 }
 
 export const FluxLines: React.FC<FluxLinesProps> = ({
@@ -237,7 +237,8 @@ export const FluxLines: React.FC<FluxLinesProps> = ({
   transparent = true,
   backgroundColor,
   className = '',
-  style
+  style,
+  dpr
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -264,7 +265,8 @@ export const FluxLines: React.FC<FluxLinesProps> = ({
     intro,
     lightMode,
     transparent,
-    backgroundColor
+    backgroundColor,
+    dpr
   };
   const settingsRef = useRef(settings);
   settingsRef.current = settings;
@@ -274,13 +276,14 @@ export const FluxLines: React.FC<FluxLinesProps> = ({
     const canvas = canvasRef.current;
     if (!container || !canvas) return undefined;
 
-    // Attempt WebGL2 first
+    // Attempt WebGL2 with native hardware antialiasing enabled
     const gl = canvas.getContext('webgl2', {
       alpha: true,
       premultipliedAlpha: true,
-      antialias: false,
+      antialias: true,
       depth: false,
-      stencil: false
+      stencil: false,
+      powerPreference: 'high-performance'
     });
 
     if (gl) {
@@ -393,7 +396,11 @@ export const FluxLines: React.FC<FluxLinesProps> = ({
         const resize = () => {
           const width = Math.max(1, container.clientWidth || window.innerWidth);
           const height = Math.max(1, container.clientHeight || window.innerHeight);
-          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          // Query real devicePixelRatio at runtime (dynamically updates when zooming or on high-DPI screens)
+          const nativeDpr = typeof window !== 'undefined' ? (window.devicePixelRatio || 1) : 1;
+          const userDpr = settingsRef.current.dpr;
+          // Render at crisp native resolution (capped at 2.5 for 4K) so contour lines are razor-sharp and never pixelated
+          const ratio = userDpr ? Math.max(0.75, Math.min(userDpr, 2.5)) : Math.max(1.0, Math.min(nativeDpr, 2.5));
           canvas.width = Math.max(1, Math.round(width * ratio));
           canvas.height = Math.max(1, Math.round(height * ratio));
           render();
@@ -424,6 +431,9 @@ export const FluxLines: React.FC<FluxLinesProps> = ({
           wake();
         };
 
+        const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(resize) : null;
+        ro?.observe(container);
+
         window.addEventListener('pointermove', onPointerMove, { passive: true });
         window.addEventListener('pointerdown', onPointerDown, { passive: true });
         window.addEventListener('resize', resize);
@@ -432,6 +442,7 @@ export const FluxLines: React.FC<FluxLinesProps> = ({
 
         return () => {
           cancelAnimationFrame(raf);
+          ro?.disconnect();
           window.removeEventListener('pointermove', onPointerMove);
           window.removeEventListener('pointerdown', onPointerDown);
           window.removeEventListener('resize', resize);

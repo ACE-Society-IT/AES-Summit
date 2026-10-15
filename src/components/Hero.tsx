@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useRef, memo } from 'react';
-import { FluxLines } from './FluxLines';
+import React, { useState, useEffect, memo } from 'react';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
-
-const FLUX_COLORS = ['#FFFFFF', '#FAF5EE', '#EAE0D3', '#D4C1B1'];
+import { FluxLines } from './FluxLines';
 
 // Isolated memoized countdown component
 const HeroCountdown = memo(function HeroCountdown() {
@@ -67,124 +66,6 @@ const HeroCountdown = memo(function HeroCountdown() {
   );
 });
 
-// Interactive constellation particles canvas component matching old aes portal / index.html
-const ConstellationCanvas = memo(function ConstellationCanvas() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    let mouse = { x: width / 2, y: height / 2, active: false };
-
-    const handleResize = () => {
-      if (!canvas) return;
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-      mouse.active = true;
-    };
-
-    const handleMouseLeave = () => {
-      mouse.active = false;
-    };
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseleave', handleMouseLeave);
-
-    const nodeCount = Math.min(Math.floor(width / 22), 70);
-    const nodes: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      radius: number;
-      alpha: number;
-    }> = [];
-
-    for (let i = 0; i < nodeCount; i++) {
-      nodes.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        radius: Math.random() * 2 + 1,
-        alpha: Math.random() * 0.4 + 0.3
-      });
-    }
-
-    let animId = 0;
-    const draw = () => {
-      ctx.clearRect(0, 0, width, height);
-
-      for (let i = 0; i < nodes.length; i++) {
-        const n = nodes[i];
-        n.x += n.vx;
-        n.y += n.vy;
-
-        if (n.x < 0 || n.x > width) n.vx *= -1;
-        if (n.y < 0 || n.y > height) n.vy *= -1;
-
-        if (mouse.active) {
-          const dx = n.x - mouse.x;
-          const dy = n.y - mouse.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 130) {
-            const angle = Math.atan2(dy, dx);
-            n.x += Math.cos(angle) * 1.2;
-            n.y += Math.sin(angle) * 1.2;
-          }
-        }
-
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(234, 224, 211, ${n.alpha})`;
-        ctx.fill();
-
-        for (let j = i + 1; j < nodes.length; j++) {
-          const n2 = nodes[j];
-          const dX = n.x - n2.x;
-          const dY = n.y - n2.y;
-          const distance = Math.sqrt(dX * dX + dY * dY);
-
-          if (distance < 120) {
-            ctx.beginPath();
-            ctx.moveTo(n.x, n.y);
-            ctx.lineTo(n2.x, n2.y);
-            const lineAlpha = (1 - distance / 120) * 0.22;
-            ctx.strokeStyle = `rgba(212, 193, 177, ${lineAlpha})`;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
-          }
-        }
-      }
-
-      animId = requestAnimationFrame(draw);
-    };
-
-    draw();
-
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} className="absolute inset-0 block w-full h-full pointer-events-none z-[1]" />;
-});
-
 interface HeroProps {
   onOpenRegister: () => void;
 }
@@ -192,30 +73,30 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
   return (
     <section id="hero" className="relative min-h-[100dvh] flex flex-col justify-center items-center text-center px-6 md:px-12 lg:px-16 xl:px-20 pt-36 pb-24 overflow-hidden bg-[rgb(27,8,5)]">
-      {/* Background Layer 1: Ambient Conic Gradient Rotation from old aes portal */}
+      {/* Background Layer 1: Ambient Conic Gradient Warm Illumination */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140vw] h-[140vw] max-w-[1400px] max-h-[1400px] rounded-full opacity-20 filter blur-[90px] pointer-events-none z-0"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140vw] h-[140vw] max-w-[1400px] max-h-[1400px] rounded-full opacity-25 filter blur-[100px] pointer-events-none z-0"
         style={{
           background: 'conic-gradient(from 0deg at 50% 50%, #5E423B, #A58A7A, #B2A298, #D8B28E, #917A6D, #6F5A50, #5E423B)',
-          animation: 'spin 30s linear infinite'
+          animation: 'spin 35s linear infinite'
         }}
       />
 
-      {/* Background Layer 2: FluxLines Interactive Fluid Waves from header background */}
-      <div className="absolute inset-0 z-0 opacity-90 pointer-events-auto">
+      {/* Background Layer 2: FluxLines Fluid Waves with Crisp High-DPI Vector Definition */}
+      <div className="absolute inset-0 z-0 opacity-80 pointer-events-auto">
         <FluxLines
           colors={['#ffffff', '#FAF5EE', '#EAE0D3']}
-          glow={3.0}
-          lineWidth={1.5}
-          rimWidth={0.25}
+          glow={0.4}
+          lineWidth={1.1}
+          rimWidth={0.1}
           flowDirection="down"
-          speed={0.35}
-          scale={1.6}
-          turbulence={0.8}
-          fluidity={0.1}
+          speed={0.15}
+          scale={2.0}
+          turbulence={0.7}
+          fluidity={0.12}
           sharpness={2.5}
-          shimmer={1.5}
-          mouseStrength={1}
+          shimmer={0.8}
+          mouseStrength={0.7}
           mouseRadius={0.35}
           intro={false}
           clickSwirl
@@ -223,35 +104,40 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
         />
       </div>
 
-      {/* Background Layer 3: Interactive Constellation Nodes & Connecting Lines */}
-      <ConstellationCanvas />
-
-      {/* Background Layer 4: Radial Center Ambient Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[550px] bg-[rgba(64,43,40,0.35)] rounded-full blur-[140px] pointer-events-none z-0" />
+      {/* Background Layer 3: Radial Center Ambient Atmosphere */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(94,66,59,0.35),rgba(42,20,16,0.2)_50%,transparent_75%)] rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(245,184,149,0.18),transparent_70%)] blur-[110px] pointer-events-none z-0" />
 
       {/* Centered Hero Content Container */}
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center">
-        {/* Summit Edition Pill with Glassmorphism matching the navbar */}
-        <div className="animate-hero-pill inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-[rgba(0,0,0,0.6)] backdrop-blur-xl border border-[rgba(255,255,255,0.15)] font-sans text-xs uppercase tracking-[0.2em] text-[rgb(234,224,211)] mb-8 shadow-xl">
-          <span className="w-2 h-2 rounded-full bg-[rgb(74,222,128)] animate-pulse" />
-          Alpha Entrepreneurship Summit · 2026 Edition
+        {/* Big AES Logo in the Center */}
+        <div className="relative mb-3 sm:mb-5 w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[560px] flex items-center justify-center">
+          {/* Subtle Ambient Backlight Halo behind the logo */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,184,149,0.28),rgba(234,224,211,0.08)_45%,transparent_70%)] blur-3xl pointer-events-none" />
+          <Image
+            src="/assets/aes-logo.png"
+            alt="Alpha Entrepreneurship Summit (AES) Logo"
+            width={560}
+            height={280}
+            priority
+            className="w-full h-auto object-contain relative z-10 drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] hover:scale-[1.02] transition-transform duration-300"
+          />
         </div>
 
-        {/* Centered Main Headline with Balanced Typography Scale and Brand Text Shimmer */}
-        <h1 className="animate-hero-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[rgb(248,244,237)] leading-[1.08] mb-6 sm:mb-8 font-sans max-w-5xl">
-          WHERE BOLD IDEAS <br className="hidden sm:inline" />
-          <span className="text-shimmer-brand font-black drop-shadow-[0_10px_30px_rgba(245,184,149,0.25)]">
-            BECOME ICONIC VENTURES
+        {/* Alpha Entrepreneurship Summit with Text Color Changing Animation */}
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-center leading-[1.1] mb-6 sm:mb-8 font-sans max-w-5xl">
+          <span className="text-shimmer-brand font-black drop-shadow-[0_10px_35px_rgba(245,184,149,0.35)]">
+            Alpha Entrepreneurship Summit
           </span>
         </h1>
 
         {/* Centered Subtitle */}
-        <p className="animate-hero-subtitle text-base sm:text-xl md:text-2xl lg:text-3xl text-[rgb(212,193,177)] leading-relaxed max-w-3xl mb-8 sm:mb-10 font-normal font-sans px-2">
+        <p className="text-base sm:text-xl md:text-2xl text-[rgb(212,193,177)] leading-relaxed max-w-3xl mb-8 sm:mb-10 font-normal font-sans px-2">
           Join the next generation of founders at our flagship event. Engage with industry leaders, develop your skills, and launch your innovative ideas.
         </p>
 
-        {/* Real Dates from old aes portal in Glassmorphism Cards like the Navbar */}
-        <div className="animate-hero-dates flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8">
+        {/* Real Dates in Glassmorphism Cards */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8">
           <div className="bg-[rgba(0,0,0,0.65)] backdrop-blur-xl rounded-2xl px-4 py-3 sm:px-6 sm:py-4 border border-[rgba(255,255,255,0.15)] shadow-xl text-center min-w-[88px] sm:min-w-[105px] hover:border-[rgba(255,255,255,0.3)] transition-all hover:scale-105">
             <p className="text-2xl sm:text-4xl font-extrabold text-[rgb(248,244,237)] font-sans">07</p>
             <p className="text-[10px] sm:text-xs font-bold text-[rgb(234,224,211)] uppercase tracking-wider font-sans mt-0.5">NOV</p>
@@ -270,7 +156,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
         </div>
 
         {/* Centered Timer directly below the text & dates */}
-        <div className="animate-hero-dates mb-10 flex flex-col items-center gap-2">
+        <div className="mb-10 flex flex-col items-center gap-2">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-[rgb(165,138,122)] font-semibold">
             Summit Commencement Countdown
           </span>
@@ -278,7 +164,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
         </div>
 
         {/* Centered Call to Action Buttons */}
-        <div className="animate-hero-cta flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 w-full max-w-sm sm:max-w-none mx-auto mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 w-full max-w-sm sm:max-w-none mx-auto mb-16">
           <a
             href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=4We7WHOgJUSJuBHvzR0a_yoXsS5ZZMtOmVx09mfgyTNUNkZORUE4VVk5V01XUUxZOExGTVRCMkpDQy4u&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacOVFJs8r-eCwIws3mBUpSnEQFYNFjYA6vfuVQmng6m-tTPRAuiz99BPEUpJw_aem_HfgdX8egwteJB1MbOk84qg"
             target="_blank"
@@ -313,7 +199,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegister }) => {
         </div>
 
         {/* Centered Trust Metrics Bar */}
-        <div className="animate-hero-metrics grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 w-full pt-10 border-t border-[rgba(255,255,255,0.1)]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 w-full pt-10 border-t border-[rgba(255,255,255,0.1)]">
           <div>
             <div className="font-sans font-bold text-3xl sm:text-4xl text-[rgb(234,224,211)]">5+</div>
             <div className="font-sans text-xs uppercase tracking-wider text-[rgb(165,138,122)] mt-1.5 font-medium">Flagship Modules</div>
